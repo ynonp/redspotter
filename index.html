@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Red Spotter</title>
+    <meta name="viewport" content="user-scalable=0,width=320" />
+
+    <style>
+        body {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+
+        #container div {
+            width: 100px;
+            height: 100px;
+            background: green;
+            margin: 10px;
+            border: 7px solid black;
+            display: inline-block;
+        }
+
+        #container div.winner {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spot the Red</h1>
+    <h4>Score: <span class="score"></span></h4>
+
+    <div id="container">
+
+    </div>
+
+    <script type="text/template" id="tmpl-winner">
+        <div class="winner" data-index="{{i}}"></div>
+    </script>
+
+    <script type="text/template" id="tmpl-looser">
+        <div data-index="{{i}}"></div>
+    </script>
+
+    <script type="text/template" id="tmpl-starter">
+        <h1>Welcome To RedSpotter</h1>
+        <button>Click To Start</button>
+    </script>
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
+    <script src="starter.js"></script>
+    <script src="score.js"></script>
+    <script src="winner.js"></script>
+    <script src="looser.js"></script>
+    <script src="game.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
